@@ -24,6 +24,7 @@ document.querySelectorAll('.cat-filter-card').forEach(card=>{
   card.addEventListener('click',()=>{
     document.querySelectorAll('.cat-filter-card').forEach(c=>c.classList.remove('active'));
     card.classList.add('active');renderGrid(card.dataset.filter);
+    setTimeout(()=>document.getElementById('grid').scrollIntoView({behavior:'smooth',block:'start'}),50);
   });
 });
 const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbVideo=document.getElementById('lb-video');

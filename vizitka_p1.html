@@ -133,6 +133,12 @@
         .c-tg:hover { background:rgba(42,171,238,.2); transform:translateY(-2px); box-shadow:0 8px 24px rgba(42,171,238,.2); }
         .c-max { background:rgba(192,132,252,.1); border:1px solid rgba(192,132,252,.25); }
         .c-max:hover { background:rgba(192,132,252,.2); transform:translateY(-2px); box-shadow:0 8px 24px rgba(192,132,252,.2); }
+        .trust-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+        .trust-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px 26px; backdrop-filter:blur(14px); transition:border-color .3s,box-shadow .3s; }
+        .trust-card:hover { border-color:rgba(192,132,252,.35); box-shadow:0 8px 32px rgba(192,132,252,.12); }
+        .trust-icon { font-size:2.4rem; margin-bottom:14px; display:block; }
+        .trust-title { font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; font-weight:600; margin-bottom:10px; color:var(--text); }
+        .trust-text { font-size:.9rem; color:rgba(226,232,240,.65); line-height:1.75; }
         .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
         .price-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px 24px; backdrop-filter:blur(14px); position:relative; overflow:hidden; transition:border-color .3s,box-shadow .3s; }
         .price-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#c084fc,#818cf8,#38bdf8); transform:scaleX(0); transform-origin:left; transition:transform .4s; }
@@ -303,43 +309,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=docum
 <div class="divider"></div>
 <section class="section">
     <div class="container">
-        <h2 class="s-title">Прайс</h2>
-        <div class="price-grid">
-            <div class="price-card">
-                <div class="price-card-head"><span class="price-icon">📸</span><h3>Нейрофото</h3></div>
-                <ul class="price-list">
-                    <li><span>1 фото — 1 человек</span><strong>от 355 ₽</strong></li>
-                    <li><span>1 фото — 2 человека</span><strong>от 490 ₽</strong></li>
-                    <li class="price-disc"><span>Пакет 3+ фото</span><strong>выгоднее</strong></li>
-                </ul>
-                <p class="price-note">Цена зависит от качества исходников и сложности обработки</p>
-            </div>
-            <div class="price-card">
-                <div class="price-card-head"><span class="price-icon">🎬</span><h3>Нейровидео</h3></div>
-                <ul class="price-list">
-                    <li><span>До 15 сек</span><strong>от 1 500 ₽</strong></li>
-                    <li><span>30 секунд</span><strong>от 2 600 ₽</strong></li>
-                    <li><span>1 минута</span><strong>от 4 400 ₽</strong></li>
-                    <li class="price-disc"><span>Мульт / анимация</span><strong>−20%</strong></li>
-                    <li class="price-incl"><span>+ музыка / озвучка</span><strong>+500 ₽</strong></li>
-                </ul>
-                <p class="price-note">Итоговая цена зависит от сложности сцены и количества кадров</p>
-            </div>
-            <div class="price-card">
-                <div class="price-card-head"><span class="price-icon">🚩</span><h3>Флаги с позывными</h3></div>
-                <ul class="price-list">
-                    <li><span>100×150 см, влажная сетка</span><strong>от 8 500 ₽</strong></li>
-                    <li class="price-incl"><span>Дизайн + разработка + печать</span><strong>включено</strong></li>
-                    <li><span>Доставка</span><strong>по тарифу ТК</strong></li>
-                </ul>
-                <p class="price-note">Доставка оплачивается клиентом. Отправка: СДЭК, Озон, Почта России</p>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="divider"></div>
-<section class="section">
-    <div class="container">
         <h2 class="s-title">Мои работы</h2>
         <div class="cat-filters">
             <div class="cat-filter-card" data-filter="voennye">
@@ -374,6 +343,71 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=docum
             </div>
         </div>
         <div id="grid"></div>
+    </div>
+</section>
+<div class="divider"></div>
+<section class="section">
+    <div class="container">
+        <h2 class="s-title">Почему мне доверяют</h2>
+        <div class="trust-grid">
+            <div class="trust-card">
+                <span class="trust-icon">🎯</span>
+                <h3 class="trust-title">Реалистично</h3>
+                <p class="trust-text">Работы выглядят как настоящие фотографии — сложно сразу понять, что это нейросеть</p>
+            </div>
+            <div class="trust-card">
+                <span class="trust-icon">💛</span>
+                <h3 class="trust-title">С душой</h3>
+                <p class="trust-text">Подхожу к каждому заказу лично, вникаю в историю и делаю для конкретного человека — не штампую</p>
+            </div>
+            <div class="trust-card">
+                <span class="trust-icon">💎</span>
+                <h3 class="trust-title">Честная цена</h3>
+                <p class="trust-text">За такое качество обычно берут дороже. Сейчас — редкая возможность получить больше, чем платишь</p>
+            </div>
+            <div class="trust-card">
+                <span class="trust-icon">✅</span>
+                <h3 class="trust-title">Довожу до результата</h3>
+                <p class="trust-text">Не бросаю проект на полпути — работаем до тех пор, пока ты не останешься доволен</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="divider"></div>
+<section class="section">
+    <div class="container">
+        <h2 class="s-title">Прайс</h2>
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="price-card-head"><span class="price-icon">📸</span><h3>Нейрофото</h3></div>
+                <ul class="price-list">
+                    <li><span>1 фото — 1 человек</span><strong>от 355 ₽</strong></li>
+                    <li><span>1 фото — 2 человека</span><strong>от 490 ₽</strong></li>
+                    <li class="price-disc"><span>Пакет 3+ фото</span><strong>выгоднее</strong></li>
+                </ul>
+                <p class="price-note">Цена зависит от качества исходников и сложности обработки</p>
+            </div>
+            <div class="price-card">
+                <div class="price-card-head"><span class="price-icon">🎬</span><h3>Нейровидео</h3></div>
+                <ul class="price-list">
+                    <li><span>До 15 сек</span><strong>от 1 500 ₽</strong></li>
+                    <li><span>30 секунд</span><strong>от 2 600 ₽</strong></li>
+                    <li><span>1 минута</span><strong>от 4 400 ₽</strong></li>
+                    <li class="price-disc"><span>Мульт / анимация</span><strong>−20%</strong></li>
+                    <li class="price-incl"><span>+ музыка / озвучка</span><strong>+500 ₽</strong></li>
+                </ul>
+                <p class="price-note">Итоговая цена зависит от сложности сцены и количества кадров</p>
+            </div>
+            <div class="price-card">
+                <div class="price-card-head"><span class="price-icon">🚩</span><h3>Флаги с позывными</h3></div>
+                <ul class="price-list">
+                    <li><span>100×150 см, влажная сетка</span><strong>от 8 500 ₽</strong></li>
+                    <li class="price-incl"><span>Дизайн + разработка + печать</span><strong>включено</strong></li>
+                    <li><span>Доставка</span><strong>по тарифу ТК</strong></li>
+                </ul>
+                <p class="price-note">Доставка оплачивается клиентом. Отправка: СДЭК, Озон, Почта России</p>
+            </div>
+        </div>
     </div>
 </section>
 <div class="lightbox" id="lightbox">

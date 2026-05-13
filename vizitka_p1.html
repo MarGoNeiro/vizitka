@@ -139,6 +139,10 @@
         .trust-icon { font-size:2.4rem; margin-bottom:14px; display:block; }
         .trust-title { font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; font-weight:600; margin-bottom:10px; color:var(--text); }
         .trust-text { font-size:.9rem; color:rgba(226,232,240,.65); line-height:1.75; }
+        .price-why { background:rgba(192,132,252,.06); border:1px solid rgba(192,132,252,.18); border-radius:16px; padding:20px 24px; margin-bottom:32px; display:flex; align-items:flex-start; gap:14px; }
+        .price-why-icon { font-size:1.6rem; flex-shrink:0; line-height:1; }
+        .price-why-text { font-size:.9rem; color:rgba(226,232,240,.72); line-height:1.75; }
+        .price-why-text strong { color:var(--text); display:block; margin-bottom:4px; font-size:1rem; }
         .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
         .price-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px 24px; backdrop-filter:blur(14px); position:relative; overflow:hidden; transition:border-color .3s,box-shadow .3s; }
         .price-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#c084fc,#818cf8,#38bdf8); transform:scaleX(0); transform-origin:left; transition:transform .4s; }
@@ -377,13 +381,20 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=docum
 <section class="section">
     <div class="container">
         <h2 class="s-title">Прайс</h2>
+        <div class="price-why">
+            <span class="price-why-icon">⏱</span>
+            <div class="price-why-text">
+                <strong>Почему такие цены?</strong>
+                Каждая работа занимает минимум 1–2 часа ручного труда: подбор стиля, настройка, итерации до результата. Это не одна кнопка — это создание с нуля. Цена отражает время и вложенный труд.
+            </div>
+        </div>
         <div class="price-grid">
             <div class="price-card">
                 <div class="price-card-head"><span class="price-icon">📸</span><h3>Нейрофото</h3></div>
                 <ul class="price-list">
                     <li><span>1 человек</span><strong>от 440 ₽</strong></li>
                     <li><span>2 человека</span><strong>от 580 ₽</strong></li>
-                    <li><span>3+ персонажа / с детьми</span><strong>от 800 ₽</strong></li>
+                    <li><span>3 персонажа / с детьми</span><strong>от 800 ₽</strong></li>
                 </ul>
                 <p class="price-note">При хороших исходниках цена может быть ниже</p>
             </div>

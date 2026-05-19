@@ -176,9 +176,9 @@
         @media (max-width:400px) { #grid{grid-template-columns:1fr} .p-item.p-video{grid-column:span 1} }
         .hero-eyebrow { font-size:.68rem; letter-spacing:5px; text-transform:uppercase; color:var(--accent); margin-bottom:14px; opacity:.85; font-family:'Raleway',sans-serif; font-weight:700; }
         .hero-tagline { font-size:.9rem; color:rgba(226,232,240,.6); line-height:1.8; margin-bottom:30px; max-width:360px; font-family:'Raleway',sans-serif; font-weight:300; text-align:center; }
-        .hero-services { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px; justify-content:center; }
-        .hero-svc { display:inline-flex; align-items:center; gap:8px; padding:9px 16px; border-radius:12px; background:rgba(192,132,252,.06); border:1px solid rgba(192,132,252,.16); font-size:.78rem; font-family:'Raleway',sans-serif; color:var(--text); transition:all .25s; }
-        .hero-svc:hover { background:rgba(192,132,252,.13); border-color:rgba(192,132,252,.35); }
+        .hero-services { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:32px; justify-content:center; }
+        .hero-svc { display:inline-flex; align-items:center; gap:6px; font-size:.82rem; font-family:'Raleway',sans-serif; color:rgba(226,232,240,.7); font-weight:500; letter-spacing:.3px; }
+        .hero-svc-sep { color:rgba(192,132,252,.4); font-size:.9rem; }
         .hero-divider { width:48px; height:2px; background:linear-gradient(90deg,#c084fc,#38bdf8); border-radius:2px; margin-bottom:28px; }
         .hero-actions { display:flex; flex-direction:column; gap:14px; align-items:center; }
         .hero-actions .channel-card { margin-bottom:0; min-width:0; }
@@ -219,9 +219,11 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=docum
             <div class="hero-divider"></div>
             <p class="hero-tagline">Создаю реалистичные нейрофото,<br>кинематографичные ролики<br>и авторские флаги с позывными</p>
             <div class="hero-services">
-                <div class="hero-svc">📸 Нейрофото</div>
-                <div class="hero-svc">🎬 Нейровидео</div>
-                <div class="hero-svc">🚩 Флаги</div>
+                <span class="hero-svc">📸 Нейрофото</span>
+                <span class="hero-svc-sep">·</span>
+                <span class="hero-svc">🎬 Нейровидео</span>
+                <span class="hero-svc-sep">·</span>
+                <span class="hero-svc">🚩 Флаги</span>
             </div>
             <div class="hero-actions">
                 <a href="https://max.ru/join/DQJsHDoQ0rxT-gDAfz7WkXgN426ROLxWf-kTq69cXN8" target="_blank" rel="noopener" class="channel-card" style="margin-bottom:0">
